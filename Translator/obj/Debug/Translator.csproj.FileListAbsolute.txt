@@ -1,0 +1,17 @@
+C:\.net projects\Translator\Translator\bin\Debug\MahApps.Metro.dll
+C:\.net projects\Translator\Translator\bin\Debug\System.Windows.Interactivity.dll
+C:\.net projects\Translator\Translator\bin\Debug\MahApps.Metro.xml
+C:\.net projects\Translator\Translator\obj\Debug\Translator.csprojResolveAssemblyReference.cache
+C:\.net projects\Translator\Translator\obj\Debug\App.baml
+C:\.net projects\Translator\Translator\obj\Debug\App.g.cs
+C:\.net projects\Translator\Translator\obj\Debug\Translator.csproj.GenerateResource.Cache
+C:\.net projects\Translator\Translator\obj\Debug\View\MainWindow.baml
+C:\.net projects\Translator\Translator\obj\Debug\View\MainWindow.g.cs
+C:\.net projects\Translator\Translator\bin\Debug\Translator.exe.config
+C:\.net projects\Translator\Translator\bin\Debug\Translator.exe
+C:\.net projects\Translator\Translator\bin\Debug\Translator.pdb
+C:\.net projects\Translator\Translator\obj\Debug\Translator_MarkupCompile.cache
+C:\.net projects\Translator\Translator\obj\Debug\Translator.g.resources
+C:\.net projects\Translator\Translator\obj\Debug\Translator.Properties.Resources.resources
+C:\.net projects\Translator\Translator\obj\Debug\Translator.exe
+C:\.net projects\Translator\Translator\obj\Debug\Translator.pdb

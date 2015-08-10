@@ -1,0 +1,17 @@
+C:\.net projects\Wpf_Demo\Wpf_Demo\bin\Debug\Wpf_Demo.exe.config
+C:\.net projects\Wpf_Demo\Wpf_Demo\bin\Debug\Wpf_Demo.exe
+C:\.net projects\Wpf_Demo\Wpf_Demo\bin\Debug\Wpf_Demo.pdb
+C:\.net projects\Wpf_Demo\Wpf_Demo\obj\Debug\MainWindow.baml
+C:\.net projects\Wpf_Demo\Wpf_Demo\obj\Debug\MainWindow.g.cs
+C:\.net projects\Wpf_Demo\Wpf_Demo\obj\Debug\App.g.cs
+C:\.net projects\Wpf_Demo\Wpf_Demo\obj\Debug\Wpf_Demo_MarkupCompile.cache
+C:\.net projects\Wpf_Demo\Wpf_Demo\obj\Debug\Wpf_Demo.g.resources
+C:\.net projects\Wpf_Demo\Wpf_Demo\obj\Debug\Wpf_Demo.Properties.Resources.resources
+C:\.net projects\Wpf_Demo\Wpf_Demo\obj\Debug\Wpf_Demo.csproj.GenerateResource.Cache
+C:\.net projects\Wpf_Demo\Wpf_Demo\obj\Debug\Wpf_Demo.exe
+C:\.net projects\Wpf_Demo\Wpf_Demo\obj\Debug\Wpf_Demo.pdb
+C:\.net projects\Wpf_Demo\Wpf_Demo\bin\Debug\System.Windows.Interactivity.dll
+C:\.net projects\Wpf_Demo\Wpf_Demo\bin\Debug\MahApps.Metro.dll
+C:\.net projects\Wpf_Demo\Wpf_Demo\bin\Debug\MahApps.Metro.xml
+C:\.net projects\Wpf_Demo\Wpf_Demo\obj\Debug\Wpf_Demo.csprojResolveAssemblyReference.cache
+C:\.net projects\Wpf_Demo\Wpf_Demo\obj\Debug\App.baml
