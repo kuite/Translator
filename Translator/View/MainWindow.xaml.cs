@@ -14,10 +14,5 @@ namespace Translator.View
             InitializeComponent();
             this.DataContext = new MainWindowViewModel();
         }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
     }
 }

@@ -37,7 +37,7 @@
             <Button Content="Generate PDF" HorizontalAlignment="Left" Margin="10, 10,0,0" VerticalAlignment="Top" Width="120" Height="30" Style="{StaticResource DefaultButton}" RenderTransformOrigin="0.496,0.5"/>
 
         </WrapPanel>
-        <TextBox Text="{Binding Input, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="36" FontSize="19" Margin="25,28,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="187" TextChanged="TextBox_TextChanged" RenderTransformOrigin="0.5,0.5"/>
+        <TextBox Text="{Binding Input, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="36" FontSize="19" Margin="25,28,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="187" RenderTransformOrigin="0.5,0.5"/>
         <Label Content="Word: " HorizontalAlignment="Left" FontWeight="Light" FontSize="19" Margin="17,147,0,0" VerticalAlignment="Top" Width="62" Height="36"/>
         <Label Content="{Binding Input}" HorizontalAlignment="Left" FontWeight="Light" FontSize="19" Margin="132,147,0,0" VerticalAlignment="Top" Width="142" Height="36"/>
         <Label Content="Translation: " FontWeight="Light" HorizontalAlignment="Left" FontSize="19" Margin="17,190,0,0" VerticalAlignment="Top" Width="115" Height="36"/>
