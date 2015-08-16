@@ -1,27 +1,45 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Windows.Input;
+using Translator.Model;
 
 namespace Translator.ViewModel
 {
     public class MainWindowViewModel : ObservableObject
     {
-        private string _input;
+        private Dictionary _dictionary = new Dictionary();
+        private ICommand _translateButton;
+        private bool _canExecute;
 
-        public string Input
+        public MainWindowViewModel()
         {
-            get { return _input; }
+            _translateButton = new RelayCommand(Translate);
+        }
+
+        private void Translate(object obj)
+        {
+            _dictionary.TranslateUnknown();
+            RaisePropertyChangedEvent("Dictionary");
+        }
+
+        public Dictionary Dictionary
+        {
+            get { return _dictionary; }
             set
             {
-                _input = value;
-                RaisePropertyChangedEvent("Input");
+                _dictionary = value;
+                RaisePropertyChangedEvent("Dictionary");
             }
         }
 
-        public string TransOne { get; set; }
-        public string TransTwo { get; set; }
-        public string TransThree { get; set; }
+        public ICommand TranslateButton
+        {
+            get { return _translateButton; }
+            set { _translateButton = value; }
+        }
+
+        public bool CanExecute
+        {
+            get { return _canExecute; }
+            set { _canExecute = value; }
+        }
     }
 }
