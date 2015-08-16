@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace Translator.Model
 {
@@ -33,12 +34,14 @@ namespace Translator.Model
             set { _translatedThree = value; }
         }
 
-        //TODO
+        //TODO:
         public void TranslateUnknown()
         {
-            TranslatedOne = "roman";
-            TranslatedTwo = "zdzisio";
-            TranslatedThree = "bodzio";
+            var translatedList = TranslationService.Translate(_unknown);
+
+            TranslatedOne = translatedList.ElementAt(0);
+            TranslatedTwo = translatedList.ElementAt(1);
+            TranslatedThree = translatedList.ElementAt(2);
         }
     }
 }
