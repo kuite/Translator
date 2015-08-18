@@ -34,7 +34,7 @@ namespace Translator.Model
             set { _translatedThree = value; }
         }
 
-        //TODO:
+
         public void TranslateUnknown()
         {
             var translatedList = TranslationService.Translate(_unknown);

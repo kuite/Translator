@@ -15,3 +15,6 @@ C:\.net projects\Translator\Translator\obj\Debug\Translator.g.resources
 C:\.net projects\Translator\Translator\obj\Debug\Translator.Properties.Resources.resources
 C:\.net projects\Translator\Translator\obj\Debug\Translator.exe
 C:\.net projects\Translator\Translator\obj\Debug\Translator.pdb
+C:\.net projects\Translator\Translator\bin\Debug\HtmlAgilityPack.dll
+C:\.net projects\Translator\Translator\bin\Debug\HtmlAgilityPack.pdb
+C:\.net projects\Translator\Translator\bin\Debug\HtmlAgilityPack.xml
