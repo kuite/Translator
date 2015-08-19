@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using System.Text.RegularExpressions;
 using HtmlAgilityPack;
 
 namespace Translator.Model
@@ -24,11 +26,19 @@ namespace Translator.Model
 
         private static string GetText(HtmlDocument doc, int i)
         {
-            var temp = "//dl[@data-translation='" + i + "']";
-            var node = doc.DocumentNode.SelectSingleNode(temp).SelectSingleNode("//div[@class='target']");
+            var node = doc.DocumentNode.SelectSingleNode("//dl[@data-translation='" + i + "']");
             if (node == null)
                 return "-";
-            return node.SelectSingleNode("//div[@class='target']").InnerText.Replace("f\n", "").Replace("m\n", "").Replace("mpl\n", "").Replace("nt\n", "").Replace("\n", "").Replace(" ", "");
+            var textNode = node.ChildNodes.Where(x => x.Name == "dd").ElementAt(0);
+
+            const RegexOptions options = RegexOptions.None;
+            var regex = new Regex(" {2,}", options);
+            var text = textNode.SelectSingleNode(".//div[@class='target']").InnerText;
+            text = regex.Replace(text, @" ");
+
+            return text.Replace("f\n", "").
+                Replace(" f ", " ").Replace("m\n", "").Replace("mpl\n", "").Replace("nt\n", "").
+                Replace("\n", "").Replace("\n\n", "").Replace("  ", "");
         }
     }
 }
