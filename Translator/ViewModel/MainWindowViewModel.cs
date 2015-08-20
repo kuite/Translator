@@ -5,29 +5,45 @@ namespace Translator.ViewModel
 {
     public class MainWindowViewModel : ObservableObject
     {
+        private Word _word = new Word();
         private Dictionary _dictionary = new Dictionary();
         private ICommand _translateButton;
-        private bool _canExecute;
+        private ICommand _addToListButton;
+        private ICommand _generatePdfButton;
 
         public MainWindowViewModel()
         {
             _translateButton = new RelayCommand(Translate);
+            _addToListButton = new RelayCommand(AddToList);
+            _generatePdfButton = new RelayCommand(GeneratePdf);
+        }
+
+        public string Message { get; set; }
+
+        public Word Word
+        {
+            get { return _word; }
+            set
+            {
+                _word = value;
+                RaisePropertyChangedEvent("Word");
+            }
         }
 
         private void Translate(object obj)
         {
-            _dictionary.TranslateUnknown();
-            RaisePropertyChangedEvent("Dictionary");
+            _word.TranslateUnknown();
+            RaisePropertyChangedEvent("Word");
         }
 
-        public Dictionary Dictionary
+        private void GeneratePdf(object obj)
         {
-            get { return _dictionary; }
-            set
-            {
-                _dictionary = value;
-                RaisePropertyChangedEvent("Dictionary");
-            }
+            //_dictionary.CreatePdf();
+        }
+
+        private void AddToList(object obj)
+        {
+            _dictionary.AddToDictionary(_word);
         }
 
         public ICommand TranslateButton
@@ -36,10 +52,16 @@ namespace Translator.ViewModel
             set { _translateButton = value; }
         }
 
-        public bool CanExecute
+        public ICommand AddToListButton
         {
-            get { return _canExecute; }
-            set { _canExecute = value; }
+            get { return _addToListButton; }
+            set { _addToListButton = value; }
+        }
+
+        public ICommand GeneratePdfButton
+        {
+            get { return _generatePdfButton; }
+            set { _generatePdfButton = value; }
         }
     }
 }

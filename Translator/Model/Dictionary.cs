@@ -1,47 +1,42 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Microsoft.Win32;
+using Newtonsoft.Json;
 
 namespace Translator.Model
 {
     public class Dictionary
     {
-        private string _unknown;
-        private string _translatedOne;
-        private string _translatedTwo;
-        private string _translatedThree;
+        private List<Word> _words;
 
-        public string Unknown
+        private const string SourcePath = @"C:\Users\kuite\Desktop\angielski\words.json";
+
+        public List<Word> Words
         {
-            get { return _unknown; }
-            set { _unknown = value; }
+            get { return _words; }
         }
 
-        public string TranslatedOne
+        public Dictionary()
         {
-            get { return _translatedOne; }
-            set { _translatedOne = value; }
+            _words = new List<Word>();
+            if (!File.Exists(SourcePath)) Save();
         }
 
-        public string TranslatedTwo
+        public void AddToDictionary(Word word)
         {
-            get { return _translatedTwo; }
-            set { _translatedTwo = value; }
+            _words = JsonConvert.DeserializeObject<List<Word>>(File.ReadAllText(SourcePath));
+            _words.Add(word);
+            Save();
         }
 
-        public string TranslatedThree
+        private void Save()
         {
-            get { return _translatedThree; }
-            set { _translatedThree = value; }
-        }
-
-
-        public void TranslateUnknown()
-        {
-            var translatedList = TranslationService.Translate(_unknown);
-
-            TranslatedOne = translatedList.ElementAt(0);
-            TranslatedTwo = translatedList.ElementAt(1);
-            TranslatedThree = translatedList.ElementAt(2);
+            var json = JsonConvert.SerializeObject(_words, Formatting.Indented);
+            File.WriteAllText(SourcePath, json);
         }
     }
 }

@@ -6,7 +6,7 @@ using HtmlAgilityPack;
 
 namespace Translator.Model
 {
-    public class TranslationService
+    public class Services
     {
         public static IEnumerable<string> Translate(string word)
         {
@@ -38,7 +38,7 @@ namespace Translator.Model
 
             return text.Replace("f\n", "").
                 Replace(" f ", " ").Replace("m\n", "").Replace("mpl\n", "").Replace("nt\n", "").
-                Replace("\n", "").Replace("\n\n", "").Replace("  ", "");
+                Replace("\n", "").Replace("\n\n", "").Replace("  ", "").Replace(" nt ", " ").Replace(" m ", " ");
         }
     }
 }
