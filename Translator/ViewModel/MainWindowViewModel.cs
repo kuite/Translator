@@ -20,6 +20,16 @@ namespace Translator.ViewModel
 
         public string Message { get; set; }
 
+        public Dictionary Dictionary
+        {
+            get { return _dictionary;}
+            set
+            {
+                _dictionary = value;
+                RaisePropertyChangedEvent("Dictionary");
+            }
+        }
+
         public Word Word
         {
             get { return _word; }
@@ -38,7 +48,7 @@ namespace Translator.ViewModel
 
         private void GeneratePdf(object obj)
         {
-            //_dictionary.CreatePdf();
+            _dictionary.CreatePdf();
         }
 
         private void AddToList(object obj)

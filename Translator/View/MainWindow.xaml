@@ -35,7 +35,7 @@
             </WrapPanel.Resources>
             <Button Command="{Binding TranslateButton}" Content="Translate" HorizontalAlignment="Left" Margin="10, 10,0,0" VerticalAlignment="Top" Width="100" Height="30" Style="{StaticResource DefaultButton}" RenderTransformOrigin="0.496,0.5"/>
             <Button Command="{Binding AddToListButton}" Content="Add to list" HorizontalAlignment="Left" Margin="0, 10,0,0" VerticalAlignment="Top" Width="100" Height="30" Style="{StaticResource DefaultButton}" RenderTransformOrigin="0.496,0.5"/>
-            <Button Command="{Binding GeneratePdf}" Content="Generate PDF" HorizontalAlignment="Left" Margin="10, 10,0,0" VerticalAlignment="Top" Width="120" Height="30" Style="{StaticResource DefaultButton}" RenderTransformOrigin="0.496,0.5"/>
+            <Button Command="{Binding GeneratePdfButton}" Content="Generate PDF" HorizontalAlignment="Left" Margin="10, 10,0,0" VerticalAlignment="Top" Width="120" Height="30" Style="{StaticResource DefaultButton}" RenderTransformOrigin="0.496,0.5"/>
 
         </WrapPanel>
         <TextBox Text="{Binding Word.Unknown, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="36" FontSize="19" Margin="25,28,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="187" RenderTransformOrigin="0.5,0.5"/>
@@ -45,6 +45,7 @@
         <TextBox Text="{Binding Word.TranslatedOne}" HorizontalAlignment="Left" FontSize="19" Margin="132,190,0,0" VerticalAlignment="Top" Width="191" Height="36"/>
         <TextBox Text="{Binding Word.TranslatedTwo}" HorizontalAlignment="Left" FontSize="19" Margin="132,228,0,0" VerticalAlignment="Top" Width="191" Height="36"/>
         <TextBox Text="{Binding Word.TranslatedThree}" HorizontalAlignment="Left" FontSize="19" Margin="132,266,0,0" VerticalAlignment="Top" Width="191" Height="36"/>
-        <Label Content="{Binding Message}" HorizontalAlignment="Left" FontWeight="Light" FontSize="14" Margin="25,320,0,0" VerticalAlignment="Top" Width="298" Height="36" RenderTransformOrigin="1.129,1.25"/>
+        <Label Content="Db path: " FontWeight="Light" HorizontalAlignment="Left" FontSize="11" Margin="22,316,0,0" VerticalAlignment="Top" Width="115" Height="27" RenderTransformOrigin="0.53,0.571"/>
+        <TextBox Text="{Binding Dictionary.SourcePath}" HorizontalAlignment="Left" FontSize="10" Margin="25,343,0,0" VerticalAlignment="Top" Width="298" Height="10"/>
     </Grid>
 </Controls:MetroWindow>

@@ -13,22 +13,33 @@ namespace Translator.Model
     {
         private List<Word> _words;
 
-        private const string SourcePath = @"C:\Users\kuite\Desktop\angielski\words.json";
+        private string _sourcePath = @"C:\Users\kuite\Desktop\angielski\words.json";
 
         public List<Word> Words
         {
             get { return _words; }
         }
 
+        public string SourcePath {
+            get { return _sourcePath; }
+            set { _sourcePath = value; }
+        }
+
         public Dictionary()
         {
             _words = new List<Word>();
-            if (!File.Exists(SourcePath)) Save();
+            if (!File.Exists(_sourcePath))
+                Save();
+
+            if (_words == null)
+                _words = new List<Word>();
         }
 
         public void AddToDictionary(Word word)
         {
-            _words = JsonConvert.DeserializeObject<List<Word>>(File.ReadAllText(SourcePath));
+            if (!File.Exists(_sourcePath))
+                Save();
+            _words = JsonConvert.DeserializeObject<List<Word>>(File.ReadAllText(_sourcePath));
             _words.Add(word);
             Save();
         }
@@ -36,7 +47,12 @@ namespace Translator.Model
         private void Save()
         {
             var json = JsonConvert.SerializeObject(_words, Formatting.Indented);
-            File.WriteAllText(SourcePath, json);
+            File.WriteAllText(_sourcePath, json);
+        }
+
+        public void CreatePdf()
+        {
+            Services.CreatePdf(_words, _sourcePath);
         }
     }
 }
