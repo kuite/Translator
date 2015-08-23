@@ -21,3 +21,4 @@ C:\.net projects\Translator\Translator\bin\Debug\Newtonsoft.Json.dll
 C:\.net projects\Translator\Translator\bin\Debug\Newtonsoft.Json.xml
 C:\.net projects\Translator\Translator\bin\Debug\itextsharp.dll
 C:\.net projects\Translator\Translator\bin\Debug\itextsharp.xml
+C:\.net projects\Translator\Translator\obj\Debug\Translator.csprojResolveAssemblyReference.cache

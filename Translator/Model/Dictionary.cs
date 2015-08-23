@@ -13,7 +13,7 @@ namespace Translator.Model
     {
         private List<Word> _words;
 
-        private string _sourcePath = @"C:\Users\kuite\Desktop\angielski\words.json";
+        private string _sourcePath = AppDomain.CurrentDomain.BaseDirectory + "words.json";
 
         public List<Word> Words
         {
