@@ -28,17 +28,18 @@ namespace Translator.Model
         public Dictionary()
         {
             _words = new List<Word>();
-            if (!File.Exists(_sourcePath))
-                Save();
+        }
 
-            if (_words == null)
-                _words = new List<Word>();
+        private void CreateJson()
+        {
+            File.Create(_sourcePath);
         }
 
         public void AddToDictionary(Word word)
         {
             if (!File.Exists(_sourcePath))
-                Save();
+                CreateJson();
+
             _words = JsonConvert.DeserializeObject<List<Word>>(File.ReadAllText(_sourcePath));
             _words.Add(word);
             Save();

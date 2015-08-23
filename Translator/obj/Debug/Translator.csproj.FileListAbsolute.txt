@@ -1,7 +1,6 @@
 C:\.net projects\Translator\Translator\bin\Debug\MahApps.Metro.dll
 C:\.net projects\Translator\Translator\bin\Debug\System.Windows.Interactivity.dll
 C:\.net projects\Translator\Translator\bin\Debug\MahApps.Metro.xml
-C:\.net projects\Translator\Translator\obj\Debug\Translator.csprojResolveAssemblyReference.cache
 C:\.net projects\Translator\Translator\obj\Debug\App.baml
 C:\.net projects\Translator\Translator\obj\Debug\App.g.cs
 C:\.net projects\Translator\Translator\obj\Debug\Translator.csproj.GenerateResource.Cache
