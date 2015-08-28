@@ -45,7 +45,5 @@
         <TextBox Text="{Binding Word.TranslatedOne}" HorizontalAlignment="Left" FontSize="19" Margin="132,190,0,0" VerticalAlignment="Top" Width="191" Height="36"/>
         <TextBox Text="{Binding Word.TranslatedTwo}" HorizontalAlignment="Left" FontSize="19" Margin="132,228,0,0" VerticalAlignment="Top" Width="191" Height="36"/>
         <TextBox Text="{Binding Word.TranslatedThree}" HorizontalAlignment="Left" FontSize="19" Margin="132,266,0,0" VerticalAlignment="Top" Width="191" Height="36"/>
-        <Label Content="Db path: " FontWeight="Light" HorizontalAlignment="Left" FontSize="11" Margin="22,316,0,0" VerticalAlignment="Top" Width="115" Height="27" RenderTransformOrigin="0.53,0.571"/>
-        <TextBox Text="{Binding Dictionary.SourcePath}" HorizontalAlignment="Left" FontSize="10" Margin="25,343,0,0" VerticalAlignment="Top" Width="298" Height="10"/>
     </Grid>
 </Controls:MetroWindow>
