@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Win32;
 using Newtonsoft.Json;
 
 namespace Translator.Model
@@ -40,7 +36,7 @@ namespace Translator.Model
             if (!File.Exists(_sourcePath))
                 CreateJson();
 
-            _words = JsonConvert.DeserializeObject<List<Word>>(File.ReadAllText(_sourcePath));
+            _words = JsonConvert.DeserializeObject<List<Word>>(File.ReadAllText(_sourcePath)) ?? new List<Word>();
             _words.Add(word);
             Save();
         }

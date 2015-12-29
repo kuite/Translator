@@ -15,8 +15,7 @@ namespace Translator.ViewModel
 
         private event EventHandler CanExecuteChangedInternal;
 
-        public RelayCommand(Action<object> execute)
-            : this(execute, DefaultCanExecute)
+        public RelayCommand(Action<object> execute) : this(execute, DefaultCanExecute)
         {
         }
 

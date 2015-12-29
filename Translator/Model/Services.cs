@@ -42,7 +42,8 @@ namespace Translator.Model
 
             return text.Replace("f\n", "").
                 Replace(" f ", " ").Replace("m\n", "").Replace("mpl\n", "").Replace("nt\n", "").
-                Replace("\n", "").Replace("\n\n", "").Replace("  ", " ").Replace(" nt ", " ").Replace(" m ", " ").
+                Replace("\n", "").Replace("\n\n", "").Replace("  ", " ").Replace(" nt ", " ").
+                Replace(" m ", " ").Replace("imper", "").
                 TrimEnd();
         }
 
@@ -59,7 +60,7 @@ namespace Translator.Model
 
             foreach (var word in words)
             {
-                document.Add(new Paragraph(word.Unknown + " - " + word.TranslatedOne + ", " + word.TranslatedTwo + ", " + word.TranslatedThree + "\n", font));
+                document.Add(new Paragraph(string.Concat(word.Unknown, " - ", word.TranslatedOne, ", ", word.TranslatedTwo, ", ", word.TranslatedThree, "\n"), font));
             }
 
             document.Close();
